@@ -1,6 +1,6 @@
 // Manually
 type User = {
-  id: number;
+  id: number;   // Optional korte id?: number ;
   name: string;
   email: string;
 };
@@ -24,8 +24,8 @@ console.log(users);
 // BuildIn Method
 const addUser2 = (user: Omit<User, "id">): User => {
   const newUser: User = {
-    ...user,
     id: lastId++,
+    ...user,
   };
   users.push(newUser);
   return newUser;

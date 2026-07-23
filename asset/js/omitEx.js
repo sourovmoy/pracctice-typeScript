@@ -16,8 +16,8 @@ console.log(users);
 // BuildIn Method
 const addUser2 = (user) => {
     const newUser = {
-        ...user,
         id: lastId++,
+        ...user,
     };
     users.push(newUser);
     return newUser;
